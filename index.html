@@ -26,54 +26,41 @@
     --brown-200: #e8ddd0;
     --amber: #c4956a;
     --footer-bg: #342c22;
-
     --ff-display: 'Playfair Display', Georgia, serif;
     --ff-body: 'DM Sans', sans-serif;
   }
 
   body { background: var(--cream); color: var(--brown-900); font-family: var(--ff-body); }
 
-  /* ── NAV ── */
+  /* NAV */
   .nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     background: rgba(250,246,240,0.92); backdrop-filter: blur(16px);
     border-bottom: 1px solid rgba(139,115,85,0.12);
   }
   .nav-inner {
-    max-width: 1200px; margin: 0 auto; padding: 0 32px;
-    display: flex; align-items: center; justify-content: space-between; height: 72px;
+    max-width: 1200px; margin: 0 auto; padding: 0 28px;
+    display: flex; align-items: center; justify-content: space-between; height: 60px;
   }
   .nav-brand { cursor: pointer; text-decoration: none; display: flex; align-items: baseline; gap: 8px; }
-  .nav-brand-name { font-family: var(--ff-display); font-size: 22px; font-weight: 700; color: var(--brown-900); letter-spacing: -0.02em; }
-  .nav-brand-cred { font-size: 11px; color: var(--brown-500); letter-spacing: 0.15em; text-transform: uppercase; }
-  .nav-links { display: flex; gap: 32px; align-items: center; }
+  .nav-brand-name { font-family: var(--ff-display); font-size: 20px; font-weight: 700; color: var(--brown-900); letter-spacing: -0.02em; }
+  .nav-brand-cred { font-size: 10px; color: var(--brown-500); letter-spacing: 0.15em; text-transform: uppercase; }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
   .nav-links a {
-    font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase;
+    font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase;
     color: var(--brown-500); text-decoration: none; transition: color 0.3s;
-    padding-bottom: 4px; border-bottom: 2px solid transparent;
+    padding-bottom: 3px; border-bottom: 2px solid transparent;
   }
   .nav-links a:hover, .nav-links a.active { color: var(--brown-900); border-bottom-color: var(--amber); }
-
   .nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
-  .nav-hamburger span {
-    display: block; width: 24px; height: 2px; background: var(--brown-900);
-    margin-bottom: 6px; transition: all 0.3s;
-  }
+  .nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--brown-900); margin-bottom: 5px; transition: all 0.3s; }
   .nav-hamburger span:last-child { margin-bottom: 0; }
-
-  .nav-mobile-menu {
-    display: none; background: rgba(250,246,240,0.98);
-    padding: 16px 32px 24px; border-top: 1px solid rgba(139,115,85,0.1);
-  }
+  .nav-mobile-menu { display: none; background: rgba(250,246,240,0.98); padding: 12px 28px 20px; border-top: 1px solid rgba(139,115,85,0.1); }
   .nav-mobile-menu.open { display: block; }
-  .nav-mobile-menu a {
-    display: block; font-size: 15px; padding: 12px 0;
-    color: var(--brown-500); text-decoration: none;
-    border-bottom: 1px solid rgba(139,115,85,0.08);
-  }
+  .nav-mobile-menu a { display: block; font-size: 14px; padding: 10px 0; color: var(--brown-500); text-decoration: none; border-bottom: 1px solid rgba(139,115,85,0.08); }
   .nav-mobile-menu a:hover { color: var(--brown-900); }
 
-  /* ── HERO ── */
+  /* HERO */
   .hero {
     min-height: 100vh; display: flex; align-items: center; justify-content: center;
     position: relative; overflow: hidden;
@@ -84,38 +71,31 @@
                 radial-gradient(ellipse at 70% 80%, rgba(139,115,85,0.06) 0%, transparent 50%);
   }
   .hero-line {
-    position: absolute; width: 1px; top: 15%; height: 70%;
+    position: absolute; width: 1px; top: 20%; height: 60%;
     background: linear-gradient(to bottom, transparent, rgba(196,149,106,0.15), transparent);
   }
   .hero-line.left { left: 8%; }
   .hero-line.right { right: 8%; }
-  .hero-inner { max-width: 800px; text-align: center; position: relative; padding: 0 32px; }
-
+  .hero-inner { max-width: 780px; text-align: center; position: relative; padding: 0 28px; }
   .hero-label {
-    font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase;
-    color: var(--amber); margin-bottom: 32px;
-    animation: heroText 1s ease 0.2s both;
+    font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--amber); margin-bottom: 24px; animation: heroText 0.8s ease 0.2s both;
   }
   .hero-title {
-    font-family: var(--ff-display); font-size: 56px; font-weight: 500;
-    line-height: 1.15; color: var(--brown-900); margin-bottom: 32px;
-    letter-spacing: -0.02em; animation: heroText 1s ease 0.4s both;
+    font-family: var(--ff-display); font-size: 52px; font-weight: 500;
+    line-height: 1.15; color: var(--brown-900); margin-bottom: 24px;
+    letter-spacing: -0.02em; animation: heroText 0.8s ease 0.35s both;
   }
   .hero-title em { font-style: italic; color: var(--brown-500); }
-  .hero-divider {
-    width: 80px; height: 2px; background: var(--amber);
-    margin: 0 auto 32px; animation: lineGrow 1s ease 0.8s both;
-  }
+  .hero-divider { width: 60px; height: 2px; background: var(--amber); margin: 0 auto 24px; animation: lineGrow 0.8s ease 0.6s both; }
   .hero-sub {
-    font-size: 18px; line-height: 1.8; color: var(--brown-600);
-    max-width: 600px; margin: 0 auto 48px;
-    animation: heroText 1s ease 0.6s both;
+    font-size: 17px; line-height: 1.7; color: var(--brown-600);
+    max-width: 560px; margin: 0 auto 36px; animation: heroText 0.8s ease 0.5s both;
   }
-  .hero-cta { display: flex; gap: 16px; justify-content: center; animation: heroText 1s ease 0.8s both; }
-
+  .hero-cta { display: flex; gap: 14px; justify-content: center; animation: heroText 0.8s ease 0.65s both; }
   .btn-primary, .btn-secondary {
-    font-family: var(--ff-body); font-size: 13px; letter-spacing: 0.12em;
-    text-transform: uppercase; padding: 16px 40px; border-radius: 2px;
+    font-family: var(--ff-body); font-size: 12px; letter-spacing: 0.12em;
+    text-transform: uppercase; padding: 14px 32px; border-radius: 2px;
     cursor: pointer; transition: all 0.3s; font-weight: 500; text-decoration: none;
   }
   .btn-primary { background: var(--brown-900); color: var(--cream); border: 1px solid var(--brown-900); }
@@ -123,42 +103,38 @@
   .btn-secondary { background: transparent; color: var(--brown-900); border: 1px solid rgba(61,50,37,0.25); }
   .btn-secondary:hover { border-color: var(--brown-900); }
 
-  /* ── SECTIONS ── */
-  .section { padding: 120px 0; }
+  /* SECTIONS */
+  .section { padding: 80px 0; }
   .section--alt { background: var(--cream-dark); }
   .section--dark { background: var(--brown-900); color: var(--brown-200); }
-  .section-inner { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+  .section-inner { max-width: 1100px; margin: 0 auto; padding: 0 28px; }
   .section-inner--narrow { max-width: 900px; }
-
   .section-label {
-    font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase;
-    color: var(--amber); margin-bottom: 20px; font-weight: 600;
+    font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--amber); margin-bottom: 14px; font-weight: 600;
   }
   .section-title {
-    font-family: var(--ff-display); font-size: 38px; font-weight: 500;
-    line-height: 1.2; color: var(--brown-900); margin-bottom: 20px;
+    font-family: var(--ff-display); font-size: 32px; font-weight: 500;
+    line-height: 1.2; color: var(--brown-900); margin-bottom: 14px;
   }
-  .section-divider { width: 60px; height: 2px; background: var(--amber); margin-bottom: 28px; }
-  .section-subtitle {
-    font-size: 15px; line-height: 1.7; color: var(--brown-600);
-    max-width: 550px; margin: 0 auto;
-  }
+  .section-divider { width: 50px; height: 2px; background: var(--amber); margin-bottom: 20px; }
 
-  /* ── ABOUT ── */
-  .about-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; align-items: start; }
-  .about-creds { font-size: 14px; line-height: 1.8; color: var(--brown-600); }
+  /* ABOUT */
+  .about-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 56px; align-items: start; }
+  .about-creds { font-size: 13px; line-height: 1.8; color: var(--brown-600); }
   .about-creds strong { color: var(--brown-900); }
-  .about-creds .sub { font-size: 13px; color: var(--brown-500); margin-bottom: 4px; }
-  .about-body { font-size: 15.5px; line-height: 1.85; color: var(--brown-700); }
-  .about-body p { margin-bottom: 24px; }
+  .about-creds .sub { font-size: 12px; color: var(--brown-500); margin-bottom: 2px; }
+  .about-body { font-size: 14.5px; line-height: 1.8; color: var(--brown-700); }
+  .about-body p { margin-bottom: 16px; }
   .about-body p:last-child { margin-bottom: 0; }
 
-  /* ── SERVICES ── */
-  .services-header { text-align: center; margin-bottom: 72px; }
-  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  /* SERVICES */
+  .services-header { text-align: center; margin-bottom: 48px; }
+  .services-header .section-subtitle { font-size: 14px; line-height: 1.7; color: var(--brown-600); max-width: 500px; margin: 0 auto; }
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .service-card {
-    padding: 32px 28px; border-radius: 2px; background: transparent;
-    border: 1px solid rgba(139,115,85,0.12); transition: all 0.4s ease;
+    padding: 24px 22px; border-radius: 2px; background: transparent;
+    border: 1px solid rgba(139,115,85,0.12); transition: all 0.35s ease;
   }
   .service-card:hover {
     background: rgba(196,149,106,0.06);
@@ -166,61 +142,52 @@
     transform: translateY(-2px);
   }
   .service-card h3 {
-    font-family: var(--ff-display); font-size: 19px; color: var(--brown-900);
-    margin-bottom: 12px; font-weight: 600;
+    font-family: var(--ff-display); font-size: 17px; color: var(--brown-900);
+    margin-bottom: 8px; font-weight: 600;
   }
-  .service-card p { font-size: 14.5px; line-height: 1.7; color: var(--brown-600); }
+  .service-card p { font-size: 13px; line-height: 1.65; color: var(--brown-600); }
 
-  /* ── ARTICLES ── */
-  .articles-header { text-align: center; margin-bottom: 56px; }
+  /* ARTICLES */
+  .articles-header { text-align: center; margin-bottom: 36px; }
   .articles-list { border-top: 1px solid rgba(139,115,85,0.15); }
-  .article-card {
-    padding: 36px 32px;
-    border-bottom: 1px solid rgba(139,115,85,0.1);
-  }
-  .article-card-inner { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; }
-  .article-card-content { flex: 1; min-width: 0; }
-  .article-meta { display: flex; gap: 16px; align-items: center; margin-bottom: 12px; flex-wrap: wrap; }
+  .article-card { padding: 28px 24px; border-bottom: 1px solid rgba(139,115,85,0.1); }
+  .article-meta { display: flex; gap: 14px; align-items: center; margin-bottom: 8px; flex-wrap: wrap; }
   .article-category {
-    font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+    font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase;
     color: var(--amber); font-weight: 600;
-    background: rgba(196,149,106,0.1); padding: 4px 10px; border-radius: 2px;
+    background: rgba(196,149,106,0.1); padding: 3px 8px; border-radius: 2px;
   }
-  .article-date { font-size: 12px; color: var(--brown-400); }
+  .article-date { font-size: 11px; color: var(--brown-400); }
   .article-title {
-    font-family: var(--ff-display); font-size: 22px; color: var(--brown-900);
-    margin-bottom: 12px; line-height: 1.35; font-weight: 600;
+    font-family: var(--ff-display); font-size: 19px; color: var(--brown-900);
+    margin-bottom: 8px; line-height: 1.3; font-weight: 600;
   }
-  .article-preview { font-size: 14.5px; line-height: 1.75; color: var(--brown-600); }
+  .article-preview { font-size: 13.5px; line-height: 1.7; color: var(--brown-600); }
 
-  /* ── BOOK ── */
-  .book-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 64px; align-items: center; }
+  /* BOOK */
+  .book-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 48px; align-items: center; }
   .book-cover {
-    background: linear-gradient(135deg, #3d3225, #5a4d3f); border-radius: 4px;
-    padding: 48px 36px; display: flex; flex-direction: column;
-    align-items: center; justify-content: center; min-height: 320px;
-    box-shadow: 12px 12px 40px rgba(61,50,37,0.15);
+    background: linear-gradient(135deg, #3d3225, #5a4d3f); border-radius: 3px;
+    padding: 40px 28px; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; min-height: 280px;
+    box-shadow: 10px 10px 32px rgba(61,50,37,0.15);
   }
   .book-cover-title {
-    font-family: var(--ff-display); font-size: 20px; color: var(--brown-200);
-    text-align: center; line-height: 1.35; font-weight: 500; margin-bottom: 16px;
+    font-family: var(--ff-display); font-size: 18px; color: var(--brown-200);
+    text-align: center; line-height: 1.35; font-weight: 500; margin-bottom: 12px;
   }
-  .book-cover-line { width: 40px; height: 1px; background: var(--amber); margin-bottom: 16px; }
-  .book-cover-sub {
-    font-size: 11px; color: var(--brown-400); text-transform: uppercase;
-    letter-spacing: 0.15em; text-align: center;
-  }
-  .book-cover-author { margin-top: 24px; font-size: 12px; color: var(--amber); letter-spacing: 0.1em; }
-
-  .book-body p { font-size: 15px; line-height: 1.8; color: var(--brown-700); margin-bottom: 24px; }
+  .book-cover-line { width: 36px; height: 1px; background: var(--amber); margin-bottom: 12px; }
+  .book-cover-sub { font-size: 10px; color: var(--brown-400); text-transform: uppercase; letter-spacing: 0.15em; text-align: center; }
+  .book-cover-author { margin-top: 20px; font-size: 11px; color: var(--amber); letter-spacing: 0.1em; }
+  .book-body p { font-size: 14px; line-height: 1.75; color: var(--brown-700); margin-bottom: 20px; }
   .book-credits {
-    font-size: 14px; line-height: 2; color: var(--brown-600);
-    border-left: 2px solid var(--amber); padding-left: 20px; margin-bottom: 32px;
+    font-size: 13px; line-height: 1.9; color: var(--brown-600);
+    border-left: 2px solid var(--amber); padding-left: 16px; margin-bottom: 24px;
   }
   .book-credits strong { color: var(--brown-900); }
-  .book-consulting p { font-size: 14px; line-height: 1.7; color: var(--brown-600); }
+  .book-consulting p { font-size: 13px; line-height: 1.65; color: var(--brown-600); }
 
-  /* ── CONTACT ── */
+  /* CONTACT */
   .contact { position: relative; overflow: hidden; }
   .contact-bg {
     position: absolute; inset: 0;
@@ -228,79 +195,67 @@
   }
   .contact-inner { position: relative; text-align: center; }
   .contact .section-title { color: var(--brown-200); }
-  .contact-subtitle {
-    font-size: 15.5px; line-height: 1.8; color: var(--brown-300);
-    max-width: 500px; margin: 0 auto 48px;
-  }
+  .contact-subtitle { font-size: 14.5px; line-height: 1.7; color: var(--brown-300); max-width: 460px; margin: 0 auto 36px; }
   .contact-phone-box {
-    display: inline-flex; align-items: center; gap: 12px;
-    padding: 20px 40px; background: rgba(196,149,106,0.1);
-    border-radius: 4px; margin-bottom: 32px;
-    border: 1px solid rgba(196,149,106,0.2);
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 32px; background: rgba(196,149,106,0.1);
+    border-radius: 3px; margin-bottom: 24px; border: 1px solid rgba(196,149,106,0.2);
   }
   .contact-phone {
-    font-family: var(--ff-display); font-size: 22px;
-    color: var(--brown-200); letter-spacing: 0.02em;
-    text-decoration: none;
+    font-family: var(--ff-display); font-size: 20px;
+    color: var(--brown-200); letter-spacing: 0.02em; text-decoration: none;
   }
-  .contact-location { font-size: 14px; color: var(--brown-500); margin-bottom: 8px; }
-  .contact-sessions { font-size: 13px; color: var(--brown-600); }
+  .contact-location { font-size: 13px; color: var(--brown-500); margin-bottom: 4px; }
+  .contact-sessions { font-size: 12px; color: var(--brown-600); }
 
-  /* ── FOOTER ── */
-  .footer {
-    padding: 40px 0; background: var(--footer-bg);
-    border-top: 1px solid rgba(196,149,106,0.1);
-  }
+  /* FOOTER */
+  .footer { padding: 32px 0; background: var(--footer-bg); border-top: 1px solid rgba(196,149,106,0.1); }
   .footer-inner {
-    max-width: 1100px; margin: 0 auto; padding: 0 32px;
+    max-width: 1100px; margin: 0 auto; padding: 0 28px;
     display: flex; justify-content: space-between; align-items: center;
   }
-  .footer-inner span { font-size: 12px; color: var(--brown-600); }
+  .footer-inner span { font-size: 11px; color: var(--brown-600); }
 
-  /* ── ANIMATIONS ── */
+  /* ANIMATIONS */
   @keyframes heroText {
-    from { opacity: 0; transform: translateY(40px); }
+    from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
   }
-  @keyframes lineGrow {
-    from { width: 0; }
-    to { width: 80px; }
-  }
-  @keyframes fadeSlideUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .fade-in { opacity: 0; transform: translateY(24px); transition: all 0.6s ease; }
-  .fade-in.visible { opacity: 1; transform: translateY(0); }
+  @keyframes lineGrow { from { width: 0; } to { width: 60px; } }
 
-  /* ── RESPONSIVE ── */
+  .reveal {
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition-delay: var(--d, 0s);
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* RESPONSIVE */
   @media (max-width: 900px) {
     .services-grid { grid-template-columns: repeat(2, 1fr); }
-    .book-grid { grid-template-columns: 1fr; }
-    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .book-grid, .about-grid { grid-template-columns: 1fr; gap: 36px; }
   }
   @media (max-width: 640px) {
     .nav-links { display: none; }
     .nav-hamburger { display: block; }
-    .hero-title { font-size: 36px; }
-    .hero-sub { font-size: 16px; }
+    .hero-title { font-size: 34px; }
+    .hero-sub { font-size: 15px; }
     .hero-cta { flex-direction: column; align-items: center; }
-    .section { padding: 80px 0; }
-    .section-inner { padding: 0 20px; }
-    .section-title { font-size: 30px; }
+    .section { padding: 56px 0; }
+    .section-inner { padding: 0 18px; }
+    .section-title { font-size: 26px; }
     .services-grid { grid-template-columns: 1fr; }
-    .article-card { padding: 28px 20px; }
-    .article-title { font-size: 19px; }
-    .footer-inner { flex-direction: column; gap: 12px; text-align: center; }
-    .contact-phone-box { padding: 16px 24px; }
-    .contact-phone { font-size: 19px; }
-    .book-cover { min-height: 260px; padding: 36px 28px; }
+    .article-card { padding: 22px 16px; }
+    .article-title { font-size: 17px; }
+    .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
+    .contact-phone-box { padding: 14px 20px; }
+    .contact-phone { font-size: 18px; }
+    .book-cover { min-height: 240px; padding: 32px 24px; }
   }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
     <a href="#home" class="nav-brand">
@@ -312,7 +267,7 @@
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#articles">Articles</a>
-      <a href="#book">Book &amp; Media</a>
+      <a href="#book">Book</a>
       <a href="#contact">Contact</a>
     </div>
     <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
@@ -324,12 +279,11 @@
     <a href="#about" onclick="closeMenu()">About</a>
     <a href="#services" onclick="closeMenu()">Services</a>
     <a href="#articles" onclick="closeMenu()">Articles</a>
-    <a href="#book" onclick="closeMenu()">Book &amp; Media</a>
+    <a href="#book" onclick="closeMenu()">Book</a>
     <a href="#contact" onclick="closeMenu()">Contact</a>
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-bg"></div>
   <div class="hero-line left"></div>
@@ -338,7 +292,7 @@
     <div class="hero-label">Psychotherapy &amp; Life Coaching · Westfield, NJ</div>
     <h1 class="hero-title">With good perspective,<br><em>we suffer less.</em></h1>
     <div class="hero-divider"></div>
-    <p class="hero-sub">I'm Steve Becker, a psychotherapist with over 25 years of experience helping adults, couples, and teens build emotional resilience and make personal breakthroughs.</p>
+    <p class="hero-sub">Psychotherapist with over 25 years helping adults, couples, and teens build emotional resilience and make personal breakthroughs.</p>
     <div class="hero-cta">
       <a href="#contact" class="btn-primary">Schedule a Consultation</a>
       <a href="#articles" class="btn-secondary">Read Articles</a>
@@ -346,11 +300,10 @@
   </div>
 </section>
 
-<!-- ABOUT -->
 <section class="section section--alt" id="about">
   <div class="section-inner">
     <div class="about-grid">
-      <div>
+      <div class="reveal">
         <div class="section-label">About</div>
         <h2 class="section-title">A collaborative commitment to your wellbeing.</h2>
         <div class="section-divider"></div>
@@ -360,200 +313,118 @@
           <p class="sub">M.S.W., New York University, 1988</p>
         </div>
       </div>
-      <div class="about-body">
-        <p>I work from several premises. First, with good perspective, we tend to suffer less and feel calmer, more grounded. Conversely, when we've lost perspective, we tend to feel more stressed, anxious, and despairing. So, I work with clients to restore and establish good perspective.</p>
-        <p>I'm a big believer that to be human is to be vulnerable, with insecurities and anxieties. Paradoxically, the most well-adjusted individuals are those most in touch, and comfortable, with their vulnerability. And the most secure individuals are those walking around least ashamed of their insecurities and anxieties.</p>
+      <div class="about-body reveal" style="--d:0.1s">
+        <p>With good perspective, we suffer less and feel calmer, more grounded. When we've lost perspective, we feel more stressed, anxious, and despairing. I work with clients to restore and establish good perspective.</p>
+        <p>To be human is to be vulnerable. Paradoxically, the most well-adjusted individuals are those most comfortable with their vulnerability. The most secure are those least ashamed of their insecurities.</p>
         <p>When I work with you individually, as a couple, or with your family, it's my privilege to join you in a collaborative commitment to improve the emotional and psychological quality of your life.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
 <section class="section" id="services">
   <div class="section-inner">
-    <div class="services-header">
+    <div class="services-header reveal">
       <div class="section-label">Therapy &amp; Coaching</div>
       <h2 class="section-title">Areas of Focus</h2>
-      <p class="section-subtitle">Great coaches know what they coach best. I'm laser-focused on facilitating personal breakthroughs — helping you get out of your own way to make big changes.</p>
+      <p class="section-subtitle">Laser-focused on facilitating personal breakthroughs — helping you get out of your own way.</p>
     </div>
     <div class="services-grid">
-      <div class="service-card fade-in">
-        <h3>Individual Therapy</h3>
-        <p>Collaborative work to restore perspective, reduce suffering, and build emotional resilience in a safe, non-judgmental space.</p>
-      </div>
-      <div class="service-card fade-in">
-        <h3>Couples Counseling</h3>
-        <p>Navigate relationship challenges with clarity, improve communication patterns, and rebuild connection with your partner.</p>
-      </div>
-      <div class="service-card fade-in">
-        <h3>Adolescent &amp; Family</h3>
-        <p>Support for families and teens navigating the complexities of growing up, family dynamics, and emotional development.</p>
-      </div>
-      <div class="service-card fade-in">
-        <h3>Performance Anxiety</h3>
-        <p>Break through the paralysis of performance pressure and learn to act with confidence even in the face of fear.</p>
-      </div>
-      <div class="service-card fade-in">
-        <h3>Self-Sabotage</h3>
-        <p>Identify and dismantle the unconscious patterns that keep you from reaching your full potential.</p>
-      </div>
-      <div class="service-card fade-in">
-        <h3>Anger &amp; Rage Management</h3>
-        <p>Develop healthier relationships with anger through understanding its roots and building constructive outlets.</p>
-      </div>
-      <div class="service-card fade-in">
-        <h3>Self-Esteem &amp; Confidence</h3>
-        <p>Cultivate genuine, durable confidence rooted in self-acceptance rather than external validation.</p>
-      </div>
-      <div class="service-card fade-in">
-        <h3>Worry Addiction</h3>
-        <p>Recognize chronic worry as a habit pattern and develop strategies to break free from its grip.</p>
-      </div>
-      <div class="service-card fade-in">
-        <h3>Perfectionism</h3>
-        <p>Learn to distinguish healthy striving from destructive perfectionism that holds you back.</p>
-      </div>
-      <div class="service-card fade-in">
-        <h3>Intimacy Expression</h3>
-        <p>Explore the complex facets of intimacy and develop the capacity for warm, generous closeness with others.</p>
-      </div>
-      <div class="service-card fade-in">
-        <h3>Complacency</h3>
-        <p>Confront the comfort of inaction and reignite your drive toward meaningful personal growth.</p>
-      </div>
-      <div class="service-card fade-in">
-        <h3>Failure Avoidance</h3>
-        <p>Transform your relationship with failure from something to fear into a catalyst for growth.</p>
-      </div>
+      <div class="service-card reveal" style="--d:0s"><h3>Individual Therapy</h3><p>Restore perspective, reduce suffering, and build emotional resilience in a safe space.</p></div>
+      <div class="service-card reveal" style="--d:.05s"><h3>Couples Counseling</h3><p>Navigate relationship challenges, improve communication, and rebuild connection.</p></div>
+      <div class="service-card reveal" style="--d:.1s"><h3>Adolescent &amp; Family</h3><p>Support for families and teens navigating growing up and emotional development.</p></div>
+      <div class="service-card reveal" style="--d:.15s"><h3>Performance Anxiety</h3><p>Break through performance paralysis. Act with confidence in the face of fear.</p></div>
+      <div class="service-card reveal" style="--d:.2s"><h3>Self-Sabotage</h3><p>Identify and dismantle unconscious patterns keeping you from your potential.</p></div>
+      <div class="service-card reveal" style="--d:.25s"><h3>Anger Management</h3><p>Develop healthier relationships with anger through understanding its roots.</p></div>
+      <div class="service-card reveal" style="--d:.3s"><h3>Self-Esteem</h3><p>Cultivate genuine confidence rooted in self-acceptance, not external validation.</p></div>
+      <div class="service-card reveal" style="--d:.35s"><h3>Worry Addiction</h3><p>Recognize chronic worry as a habit pattern and develop strategies to break free.</p></div>
+      <div class="service-card reveal" style="--d:.4s"><h3>Perfectionism</h3><p>Distinguish healthy striving from destructive perfectionism that holds you back.</p></div>
+      <div class="service-card reveal" style="--d:.45s"><h3>Intimacy Expression</h3><p>Develop the capacity for warm, generous closeness with others.</p></div>
+      <div class="service-card reveal" style="--d:.5s"><h3>Complacency</h3><p>Confront the comfort of inaction and reignite your drive toward growth.</p></div>
+      <div class="service-card reveal" style="--d:.55s"><h3>Failure Avoidance</h3><p>Transform failure from something to fear into a catalyst for growth.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ARTICLES -->
 <section class="section section--alt" id="articles">
   <div class="section-inner section-inner--narrow">
-    <div class="articles-header">
+    <div class="articles-header reveal">
       <div class="section-label">Insights</div>
       <h2 class="section-title">Articles</h2>
-      <p class="section-subtitle">Perspectives on vulnerability, confidence, relationships, and the exploitative personalities.</p>
     </div>
-
-    <div class="articles-list" id="articlesList">
-
-      <div class="article-card">
-        <div class="article-card-inner">
-          <div class="article-card-content">
-            <div class="article-meta">
-              <span class="article-category">Personal Growth</span>
-              <span class="article-date">February 5, 2021</span>
-            </div>
-            <h3 class="article-title">Stop Acting Like You're a Guest in this World</h3>
-            <p class="article-preview">We can live in the world as hosts, or live in it as guests. You're an inhabitant of the world, not a guest. Guests walk on eggshells, apologize all the time. As a host, you own that your existence in this world is yours. You don't grovel for acceptance and validation of your existence.</p>
-          </div>
+    <div class="articles-list">
+      <div class="article-card reveal">
+        <div class="article-meta">
+          <span class="article-category">Personal Growth</span>
+          <span class="article-date">February 5, 2021</span>
         </div>
+        <h3 class="article-title">Stop Acting Like You're a Guest in this World</h3>
+        <p class="article-preview">You're an inhabitant of the world, not a guest. Guests walk on eggshells and apologize for their existence. As a host, you own that your place in this world is yours.</p>
       </div>
-
-      <div class="article-card">
-        <div class="article-card-inner">
-          <div class="article-card-content">
-            <div class="article-meta">
-              <span class="article-category">Relationships</span>
-              <span class="article-date">January 29, 2021</span>
-            </div>
-            <h3 class="article-title">When Someone Won't Give You Closure</h3>
-            <p class="article-preview">When someone refuses you the closure you're seeking, it's usually a bad sign. It's actually rare to get good closure when relationships end, because most relationships end from weak communication, and good closure requires honest, transparent communication.</p>
-          </div>
+      <div class="article-card reveal">
+        <div class="article-meta">
+          <span class="article-category">Relationships</span>
+          <span class="article-date">January 29, 2021</span>
         </div>
+        <h3 class="article-title">When Someone Won't Give You Closure</h3>
+        <p class="article-preview">When someone refuses you closure, it's usually a bad sign. Most relationships end from weak communication, and good closure requires honest, transparent communication.</p>
       </div>
-
-      <div class="article-card">
-        <div class="article-card-inner">
-          <div class="article-card-content">
-            <div class="article-meta">
-              <span class="article-category">Relationships</span>
-              <span class="article-date">April 14, 2018</span>
-            </div>
-            <h3 class="article-title">Relationship Testing: Why It's a Bad Idea</h3>
-            <p class="article-preview">Every time we test our partners, we make them unwitting subjects of our private experiments. When their responses fall short, we administer retributive feedback that leaves them feeling ambushed. Testing has only negative impacts on relationships. It is never productive or constructive.</p>
-          </div>
+      <div class="article-card reveal">
+        <div class="article-meta">
+          <span class="article-category">Relationships</span>
+          <span class="article-date">April 14, 2018</span>
         </div>
+        <h3 class="article-title">Relationship Testing: Why It's a Bad Idea</h3>
+        <p class="article-preview">Every time we test our partners, we make them unwitting subjects of our private experiments. Testing has only negative impacts on relationships.</p>
       </div>
-
-      <div class="article-card">
-        <div class="article-card-inner">
-          <div class="article-card-content">
-            <div class="article-meta">
-              <span class="article-category">Self-Esteem</span>
-              <span class="article-date">July 6, 2018</span>
-            </div>
-            <h3 class="article-title">What Is Real Confidence?</h3>
-            <p class="article-preview">True confidence is best embodied not by the absence of vulnerability, but by the presence of our determination to pursue good, worthy agendas in coexistence with our rawest vulnerability. Real confidence is about having faith in ourselves that we can soldier through everything.</p>
-          </div>
+      <div class="article-card reveal">
+        <div class="article-meta">
+          <span class="article-category">Self-Esteem</span>
+          <span class="article-date">July 6, 2018</span>
         </div>
+        <h3 class="article-title">What Is Real Confidence?</h3>
+        <p class="article-preview">True confidence isn't the absence of vulnerability. It's the determination to pursue worthy agendas in coexistence with your rawest vulnerability.</p>
       </div>
-
-      <div class="article-card">
-        <div class="article-card-inner">
-          <div class="article-card-content">
-            <div class="article-meta">
-              <span class="article-category">Personal Growth</span>
-              <span class="article-date">September 26, 2017</span>
-            </div>
-            <h3 class="article-title">In Desperation, We Settle</h3>
-            <p class="article-preview">It's important to curb our desperation, because in desperation we tend to settle. Whether desperate for love, companionship, affirmation, or escape from emptiness, we'll want to step back and ask ourselves: Am I acting from desperation? Desperation is a state of mind, not you.</p>
-          </div>
+      <div class="article-card reveal">
+        <div class="article-meta">
+          <span class="article-category">Personal Growth</span>
+          <span class="article-date">September 26, 2017</span>
         </div>
+        <h3 class="article-title">In Desperation, We Settle</h3>
+        <p class="article-preview">In desperation, we make highly compromised, impulsive decisions. Whether desperate for love, affirmation, or escape from emptiness — step back and ask: Am I acting from desperation?</p>
       </div>
-
-      <div class="article-card">
-        <div class="article-card-inner">
-          <div class="article-card-content">
-            <div class="article-meta">
-              <span class="article-category">Relationships</span>
-              <span class="article-date">June 9, 2017</span>
-            </div>
-            <h3 class="article-title">Is Your Partner a Jerk, Narcissist, or Psychopath? Who Cares?</h3>
-            <p class="article-preview">We can get lost in diagnosis searching, in our hunger for diagnostic certitude. Here's a much simpler criterion: ask yourself, does this person generally love me? Does this person treat me well? These basic questions are far more important than obsessing over labels.</p>
-          </div>
+      <div class="article-card reveal">
+        <div class="article-meta">
+          <span class="article-category">Relationships</span>
+          <span class="article-date">June 9, 2017</span>
         </div>
+        <h3 class="article-title">Is Your Partner a Jerk, Narcissist, or Psychopath? Who Cares?</h3>
+        <p class="article-preview">We get lost in diagnosis searching. Simpler criterion: does this person love me? Does this person treat me well? These questions matter far more than labels.</p>
       </div>
-
-      <div class="article-card">
-        <div class="article-card-inner">
-          <div class="article-card-content">
-            <div class="article-meta">
-              <span class="article-category">Psychopathy</span>
-              <span class="article-date">June 22, 2015</span>
-            </div>
-            <h3 class="article-title">A Jerk, Abuser, or Psychopath?</h3>
-            <p class="article-preview">How do we distinguish between your common jerk, abuser, and psychopath? The lines can be quite murky. If you're a psychopath, by definition you are all three; if you're an abusive personality, then you're at least two of the three.</p>
-          </div>
+      <div class="article-card reveal">
+        <div class="article-meta">
+          <span class="article-category">Psychopathy</span>
+          <span class="article-date">June 22, 2015</span>
         </div>
+        <h3 class="article-title">A Jerk, Abuser, or Psychopath?</h3>
+        <p class="article-preview">How do we distinguish between a common jerk, abuser, and psychopath? The lines can be murky. If you're a psychopath, by definition you are all three.</p>
       </div>
-
-      <div class="article-card">
-        <div class="article-card-inner">
-          <div class="article-card-content">
-            <div class="article-meta">
-              <span class="article-category">Psychopathy</span>
-              <span class="article-date">December 23, 2016</span>
-            </div>
-            <h3 class="article-title">Understanding the Psychopathic Personality</h3>
-            <p class="article-preview">It is time to shed euphemistic explanations. Massive contempt for rules, propriety and limits, and brazen, transgressive audacity square less with the profile of a commonly disordered narcissist than a charismatic, psychopathic personality.</p>
-          </div>
+      <div class="article-card reveal">
+        <div class="article-meta">
+          <span class="article-category">Psychopathy</span>
+          <span class="article-date">December 23, 2016</span>
         </div>
+        <h3 class="article-title">Understanding the Psychopathic Personality</h3>
+        <p class="article-preview">Massive contempt for rules, propriety and limits, and brazen transgressive audacity square less with a commonly disordered narcissist than a charismatic, psychopathic personality.</p>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- BOOK & MEDIA -->
 <section class="section" id="book">
   <div class="section-inner section-inner--narrow">
     <div class="book-grid">
-      <div>
+      <div class="reveal">
         <div class="book-cover">
           <div class="book-cover-title">The Inner World<br>of the Psychopath</div>
           <div class="book-cover-line"></div>
@@ -561,86 +432,67 @@
           <div class="book-cover-author">Steve Becker, LCSW</div>
         </div>
       </div>
-      <div>
+      <div class="reveal" style="--d:0.1s">
         <div class="section-label">Published Work</div>
         <h2 class="section-title">The Inner World of the Psychopath</h2>
         <div class="book-body">
-          <p>Published May 2015, this book has received over 50 reviews and maintains an Amazon 5-star rating. It provides a definitive primer on the psychopathic personality for both clinicians and the general public.</p>
+          <p>Published May 2015. Over 50 reviews, Amazon 5-star rating. A definitive primer on the psychopathic personality for clinicians and the general public.</p>
         </div>
         <div class="book-credits">
           <p>Featured in <strong>Psychology Today</strong> (August 2015 cover story)</p>
           <p>Quoted in <strong>The Atlantic</strong> (July 2016)</p>
           <p>Extensive radio interviews and media appearances</p>
-          <p>Over 100 published articles on the exploitative personalities</p>
+          <p>Over 100 published articles on exploitative personalities</p>
         </div>
         <div class="book-consulting">
           <div class="section-label">Consulting &amp; Presentations</div>
-          <p>Available to the media and organizations for consulting on the narcissistic spectrum personality disorders, malignant narcissism, and psychopathic personality. Radical Breakthrough Workshops also available.</p>
+          <p>Available to media and organizations for consulting on narcissistic spectrum disorders, malignant narcissism, and psychopathic personality. Radical Breakthrough Workshops also available.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section class="section section--dark contact" id="contact">
   <div class="contact-bg"></div>
   <div class="section-inner section-inner--narrow contact-inner">
     <div class="section-label">Get in Touch</div>
     <h2 class="section-title" style="color: var(--brown-200);">Begin Your Journey</h2>
-    <p class="contact-subtitle">Taking the first step is often the hardest part. I welcome the chance to discuss how we might work together.</p>
+    <p class="contact-subtitle">Taking the first step is often the hardest. I welcome the chance to discuss how we might work together.</p>
     <div class="contact-phone-box">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
       <a href="tel:9084562679" class="contact-phone">(908) 456-2679</a>
     </div>
     <p class="contact-location">Westfield, New Jersey</p>
-    <p class="contact-sessions">Individual, Couples, Adolescent &amp; Family Sessions Available</p>
+    <p class="contact-sessions">Individual, Couples, Adolescent &amp; Family Sessions</p>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-inner">
-    <span>&copy; 2025 Steve Becker, LCSW, CH.T. All rights reserved.</span>
+    <span>&copy; 2025 Steve Becker, LCSW, CH.T</span>
     <span>Psychotherapy &amp; Life Coaching · Westfield, NJ</span>
   </div>
 </footer>
 
 <script>
-  // Mobile menu
-  function toggleMenu() {
-    document.getElementById('mobileMenu').classList.toggle('open');
-  }
-  function closeMenu() {
-    document.getElementById('mobileMenu').classList.remove('open');
-  }
+  function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+  function closeMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
 
-  // Active nav link on scroll
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-links a');
   window.addEventListener('scroll', () => {
     let current = '';
-    sections.forEach(section => {
-      const top = section.offsetTop - 200;
-      if (window.scrollY >= top) current = section.getAttribute('id');
-    });
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === '#' + current) link.classList.add('active');
-    });
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 160) current = s.id; });
+    navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + current));
   });
 
-  // Fade-in on scroll
-  const fadeEls = document.querySelectorAll('.fade-in');
-  const fadeObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 60);
-        fadeObserver.unobserve(entry.target);
-      }
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); }
     });
-  }, { threshold: 0.15 });
-  fadeEls.forEach(el => fadeObserver.observe(el));
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 </script>
 
 </body>
